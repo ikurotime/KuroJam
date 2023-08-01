@@ -1,0 +1,19 @@
+<script is:inline>
+  // 👆 This script prevents the FART effect.
+  document.documentElement.classList.add(
+    localStorage.getItem('theme') ?? 'dark' // 👈 Change this to your default theme ("dark" / "light")
+  )
+</script>
+<script>
+  const themeToggle = document.querySelector('#theme-toggle')
+
+  themeToggle?.addEventListener('click', function () {
+    const currentTheme = localStorage.getItem('theme') ?? 'dark' // 👈 Change this to your default theme ("dark" / "light")
+    const nextTheme = currentTheme === 'dark' ? 'light' : 'dark'
+
+    document.documentElement.classList.remove(currentTheme)
+    document.documentElement.classList.add(nextTheme)
+
+    localStorage.setItem('theme', nextTheme)
+  })
+</script>

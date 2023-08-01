@@ -10,6 +10,28 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.9.6"
+    "@astrojs/react": "^2.2.1",
+    "@astrojs/tailwind": "^4.0.0",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "astro": "^2.9.6",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "lucide-react": "^0.263.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss": "^3.3.3",
+    "tailwindcss-animate": "^1.0.6"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^6.2.0",
+    "eslint": "^8.46.0",
+    "eslint-plugin-astro": "^0.28.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "prettier": "^3.0.0",
+    "prettier-config-standard": "^5.0.0",
+    "prettier-plugin-astro": "^0.11.0"
   }
 }

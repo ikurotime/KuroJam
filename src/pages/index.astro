@@ -1,15 +1,75 @@
 ---
+import Section from '@/components/ui/Section.astro'
+import Layout from '../layouts/Layout.astro'
+import MainLayout from '../layouts/MainLayout.astro'
+import { Button } from '@/components/ui/button'
+import Countdown from '@/components/ui/countdown/Countdown'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="KuroJam">
+  <Layout>
+    <div class="py-12 px-4 flex flex-col gap-8">
+      <section
+        class="border w-full items-center justify-center flex flex-col p-8 rounded-md gap-4">
+        <h1 class="text-7xl sm:text-9xl">KuroJam</h1>
+        <h2 class="text-2xl">
+          El evento tech donde podrás crear un proyecto basado en un tema en
+          común.
+        </h2>
+        <Countdown client:load />
+        <Button className="text-xl">¡Notifícame!</Button>
+      </section>
+      <div
+        class="flex-1 gap-5 m-auto grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] w-full items-start justify-center">
+        <Section
+          title="¿Qué es?"
+          description={'KuroJam es un evento de desarrollo, donde los participantes crearán un proyecto basado en un tematica elegida por la comunidad.'}
+        />
+        <Section
+          title={'¿Cuándo es?'}
+          description={'Se llevará a cabo del 10 al 25 de agosto del 2023.'}
+        />
+        <Section
+          title="¿Qué puedo ganar?"
+          description="Los ganadores de KuroJam recibirán:"
+        />
+        <Section
+          title={'¿Cuánto cuesta 😱?'}
+          description={'Es un evento gratuito, por lo que no tendrás que pagar nada para participar.'}
+        />
+      </div>
+      <div class="w-full flex-1 flex justify-center border-b py-2">
+        <h3 class="text-5xl">FAQ</h3>
+      </div>
+      <div
+        class="flex-1 gap-5 my-auto grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] w-full items-start justify-center">
+        <Section
+          title={'¿Dónde es?'}
+          description={' KuroJam se llevará a cabo de manera virtual, por lo que podrás participar desde cualquier parte del mundo.'}
+        />
+
+        <Section
+          title="¿Cómo me registro?"
+          description=" Para registrarte en KuroJam, deberás llenar el formulario de registro el dia del evento."
+        />
+        <Section
+          title="¿Qué necesito para participar?"
+          description="Para participar en KuroJam, necesitarás:"
+          options={['Un PC', 'Una cuenta de GitHub', 'Una cuenta de Discord']}
+        />
+        <Section
+          title="¿Quiénes son los patrocinadores?"
+          description="KuroJam actualmente no cuenta con patrocinadores. Si quieres patrocinar el evento, puedes contactarnos en: @ikurotime en Twitter."
+        />
+        <Section
+          title="¿Dónde puedo encontrar más información?"
+          description="Para más información, puedes visitar nuestro discord"
+        />
+        <Section
+          title="¿Cómo puedo ayudar?"
+          description="Puedes ayudarnos compartiendo el evento en redes sociales. ¡Muchas gracias!"
+        />
+      </div>
+    </div>
+  </Layout>
+</MainLayout>
