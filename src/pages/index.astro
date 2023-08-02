@@ -38,13 +38,14 @@ import { DialogTopics } from '@/components/ui/DialogTopics.tsx'
         />
         <Section
           client:load
-          title="¿Qué puedo ganar? 🏆"
-          description="Los ganadores de KuroJam recibirán:"
+          title="¿Habrá premios? 🏆"
+          description="Los 3 mejores proyectos de la KuroJam serán premiados"
         />
+
         <Section
           client:load
-          title={'¿Cuánto cuesta 😱?'}
-          description={'Es un evento gratuito, por lo que no tendrás que pagar nada para participar.'}
+          title={'¿Tengo que hacer una web? 🤔'}
+          description={'Puedes entregarnos tu proyecto en cualquier formato, ya sea una web, una app, un juego, etc. Mientras entre dentro de la temática, ¡todo vale!'}
         />
       </div>
       <div class="w-full flex-1 flex justify-center border-b py-2">
@@ -52,6 +53,16 @@ import { DialogTopics } from '@/components/ui/DialogTopics.tsx'
       </div>
       <div
         class="flex-1 gap-5 my-auto grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] w-full items-start justify-center">
+        <Section
+          client:load
+          title={'¿Tengo que hacer equipos 👥?'}
+          description={'Puedes participar solo o en equipo, como prefieras. Hasta 5 personas por equipo. (Puede haber excepciones)'}
+        />
+        <Section
+          client:load
+          title={'¿Cuánto cuesta 😱?'}
+          description={'Es un evento gratuito, por lo que no tendrás que pagar nada para participar.'}
+        />
         <Section
           client:load
           title={'¿Dónde es? 🌎'}
