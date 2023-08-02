@@ -1,5 +1,6 @@
 ---
 import ThemeProvider from '@/components/ThemeProvider.astro'
+import { Toaster } from '@/components/ui/toaster';
 import '@/globals.css'
 const { title } = Astro.props
 ---
@@ -19,6 +20,10 @@ const { title } = Astro.props
       * {
         font-family: 'LeagueSpartan', sans-serif;
       }
+      html {
+        overflow-y: scroll;
+      }
     </style>
+          <Toaster client:load />
   </body>
 </html>

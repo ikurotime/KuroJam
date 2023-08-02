@@ -2,8 +2,10 @@
 import Section from '@/components/ui/Section.astro'
 import Layout from '../layouts/Layout.astro'
 import MainLayout from '../layouts/MainLayout.astro'
-import { Button } from '@/components/ui/button'
+import { Button, buttonVariants } from '@/components/ui/button'
 import Countdown from '@/components/ui/countdown/Countdown'
+import { DialogEmails } from '@/components/ui/DialogEmails'
+import { DialogTopics } from '@/components/ui/DialogTopics'
 ---
 
 <MainLayout title="KuroJam">
@@ -17,7 +19,10 @@ import Countdown from '@/components/ui/countdown/Countdown'
           común.
         </h2>
         <Countdown client:load />
-        <Button className="text-xl">¡Notifícame!</Button>
+        <div class="text-xl">
+          <DialogEmails client:load />
+          <DialogTopics client:load />
+        </div>
       </section>
       <div
         class="flex-1 gap-5 m-auto grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] w-full items-start justify-center">
@@ -73,3 +78,4 @@ import Countdown from '@/components/ui/countdown/Countdown'
     </div>
   </Layout>
 </MainLayout>
+@/components/ui/DialogEmails
