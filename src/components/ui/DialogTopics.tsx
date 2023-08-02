@@ -1,4 +1,4 @@
-import { Button, buttonVariants } from '@/components/ui/button'
+import { Button, buttonVariants } from '@/components/ui/button.tsx'
 import {
   Dialog,
   DialogContent,
@@ -7,12 +7,12 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger
-} from '@/components/ui/dialog'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
+} from '@/components/ui/dialog.tsx'
+import { Input } from '@/components/ui/input.tsx'
+import { Label } from '@/components/ui/label.tsx'
 
 import { useState } from 'react'
-import { useToast } from './use-toast'
+import { useToast } from './use-toast.ts'
 
 export function DialogTopics() {
   const arrayTemas = ["Halloween","Navidad","Verano","Invierno","Primavera","Otoño","Carnaval","Cine","Videojuegos","Música","Deportes","Animales","Comida","Tecnología","Historia","Fantasía","Ciencia ficción","Misterio","Terror","Romance","Aventura","Acción","Comedia","Drama","Thriller","Documental","Musical","Western","Guerra","Superhéroes","Espionaje","Crimen","Política","Biográfico","Infantil","Animación","Anime","Manga","Cómic","Novela gráfica","Literatura","Poesía","Teatro","Danza","Arte","Fotografía","Moda","Arquitectura","Diseño","Cultura","Viajes","Naturaleza","Ciencia","Salud","Medicina","Psicología","Economía","Negocios","Finanzas","Marketing","Publicidad","Emprendimiento","Liderazgo","Productividad","Desarrollo personal","Desarrollo profesional","Idiomas","Programación","Diseño","Videojuegos","Cocina","Manualidades","Jardinería","Bricolaje","Música","Baile","Canto","Instrumentos","Deportes","Fitness","Yoga","Pilates","Meditación","Mindfulness","Espiritualidad","Religión","Astrología","Tarot","Mascotas","Cine","Series","Videojuegos","Música","Deportes","Animales","Comida","Tecnología","Historia","Fantasía","Ciencia ficción","Misterio","Terror","Romance","Aventura","Acción","Comedia","Drama","Thriller","Documental","Musical","Western","Guerra","Superhéroes","Espionaje","Crimen","Política","Biográfico","Infantil","Animación","Anime","Manga","Cómic","Novela gráfica","Literatura","Poesía","Teatro","Danza","Arte","Fotografía","Moda","Arquitectura","Diseño","Cultura","Viajes","Naturaleza","Ciencia","Salud","Medicina","Psicología","Economía","Negocios"]
@@ -76,7 +76,7 @@ export function DialogTopics() {
                 name="topic"
                 type="text"
                 value={topic}
-                onChange={(e) => setTopic(e.target.value)}
+                onChange={(e:any) => setTopic(e.target.value)}
                 placeholder={randomTopic}
                 className="col-span-3"
               />
