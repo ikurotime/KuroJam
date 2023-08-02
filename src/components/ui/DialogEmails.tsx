@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button.tsx'
+import { Button, buttonVariants } from '@/components/ui/button.tsx'
 import {
   Dialog,
   DialogContent,
@@ -16,10 +16,11 @@ import { useToast } from './use-toast.ts'
 
 export function DialogEmails() {
   const [email, setEmail] = useState('')
+  const [loading, setLoading] = useState(false)
   const { toast } = useToast()
   const handleSubmit = (e: any) => {
     e.preventDefault()
-    const formData = new FormData(e.target as HTMLFormElement)
+    setLoading(true)
     fetch('/api/save-reminder', {
       method: 'POST',
       body: JSON.stringify({email})
@@ -41,6 +42,7 @@ export function DialogEmails() {
         })
       }
       setEmail('')
+      setLoading(false)
     }
     )
   }
@@ -74,7 +76,7 @@ export function DialogEmails() {
               />
             </div>
             <DialogFooter>
-              <Button type="submit">Enviar</Button>
+              <Button type="submit" disabled={loading}>{loading ? 'Enviando...': 'Enviar'}</Button>
             </DialogFooter>
           </div>
         </form>

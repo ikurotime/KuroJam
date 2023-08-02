@@ -18,7 +18,7 @@ export function DialogTopics() {
   const arrayTemas = ["Halloween","Navidad","Verano","Invierno","Primavera","Otoño","Carnaval","Cine","Videojuegos","Música","Deportes","Animales","Comida","Tecnología","Historia","Fantasía","Ciencia ficción","Misterio","Terror","Romance","Aventura","Acción","Comedia","Drama","Thriller","Documental","Musical","Western","Guerra","Superhéroes","Espionaje","Crimen","Política","Biográfico","Infantil","Animación","Anime","Manga","Cómic","Novela gráfica","Literatura","Poesía","Teatro","Danza","Arte","Fotografía","Moda","Arquitectura","Diseño","Cultura","Viajes","Naturaleza","Ciencia","Salud","Medicina","Psicología","Economía","Negocios","Finanzas","Marketing","Publicidad","Emprendimiento","Liderazgo","Productividad","Desarrollo personal","Desarrollo profesional","Idiomas","Programación","Diseño","Videojuegos","Cocina","Manualidades","Jardinería","Bricolaje","Música","Baile","Canto","Instrumentos","Deportes","Fitness","Yoga","Pilates","Meditación","Mindfulness","Espiritualidad","Religión","Astrología","Tarot","Mascotas","Cine","Series","Videojuegos","Música","Deportes","Animales","Comida","Tecnología","Historia","Fantasía","Ciencia ficción","Misterio","Terror","Romance","Aventura","Acción","Comedia","Drama","Thriller","Documental","Musical","Western","Guerra","Superhéroes","Espionaje","Crimen","Política","Biográfico","Infantil","Animación","Anime","Manga","Cómic","Novela gráfica","Literatura","Poesía","Teatro","Danza","Arte","Fotografía","Moda","Arquitectura","Diseño","Cultura","Viajes","Naturaleza","Ciencia","Salud","Medicina","Psicología","Economía","Negocios"]
 
   const [topic, setTopic] = useState('')
-
+  const [loading, setLoading] = useState(false)
   const [randomTopic, setRandomTopic] = useState(arrayTemas[Math.floor(Math.random() * arrayTemas.length)])
   const { toast } = useToast()
   const getRandomTopic = () => {
@@ -26,7 +26,7 @@ export function DialogTopics() {
   }
   const handleSubmit = (e: any) => {
     e.preventDefault()
-    const formData = new FormData(e.target as HTMLFormElement)
+    setLoading(true)
     fetch('/api/save-topic', {
       method: 'POST',
       body: JSON.stringify({topic}) 
@@ -43,6 +43,7 @@ export function DialogTopics() {
         })
       }
       setTopic('')
+      setLoading(false)
     }
     )
 
@@ -82,7 +83,7 @@ export function DialogTopics() {
               />
             </div>
             <DialogFooter>
-              <Button type="submit">Enviar</Button>
+              <Button type="submit" disabled={loading} >{loading ? 'Enviando...' : 'Enviar'}</Button>
             </DialogFooter>
           </div>
         </form>
