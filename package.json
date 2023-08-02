@@ -13,6 +13,7 @@
     "@astrojs/node": "^5.3.1",
     "@astrojs/react": "^2.2.1",
     "@astrojs/tailwind": "^4.0.0",
+    "@astrojs/vercel": "^3.7.5",
     "@radix-ui/react-dialog": "^1.0.4",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
