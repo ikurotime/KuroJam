@@ -29,7 +29,7 @@ export function DialogTopics() {
     const formData = new FormData(e.target as HTMLFormElement)
     fetch('/api/save-topic', {
       method: 'POST',
-      body: formData
+      body: JSON.stringify({topic}) 
     }).then((res) => {
       if (res.status === 200) {
         toast({
@@ -75,6 +75,7 @@ export function DialogTopics() {
                 id="topic"
                 name="topic"
                 type="text"
+                value={topic}
                 onChange={(e) => setTopic(e.target.value)}
                 placeholder={randomTopic}
                 className="col-span-3"

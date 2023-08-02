@@ -22,7 +22,7 @@ export function DialogEmails() {
     const formData = new FormData(e.target as HTMLFormElement)
     fetch('/api/save-reminder', {
       method: 'POST',
-      body: formData
+      body: JSON.stringify({email})
     }).then((res) => {
       if (res.status === 200) {
         toast({
