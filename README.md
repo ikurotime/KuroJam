@@ -1,6 +1,5 @@
 # Kurojam
 
-image
 ![KuroJam](https://i.postimg.cc/G2bg4wWP/Screenshot-2023-08-02-at-19-36-38.png)
 
 ## Descripción 📖
