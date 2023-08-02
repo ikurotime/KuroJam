@@ -19,3 +19,12 @@ Al hacer fork del proyecto, instala las dependencias y ejecuta el proyecto local
 ```
 vercel dev
 ```
+
+## Probar la base de datos 📦
+
+Si quisieras emular la base de datos en local, debes incluir un archivo .env con las variables de entorno de la base de datos.
+
+```
+VITE_REDIS_URL=redis://localhost:6379
+
+```
