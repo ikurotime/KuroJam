@@ -27,7 +27,7 @@ const Countdown = () => {
 
   return (
     <div className="countdown">
-      <div className="content">
+      <div className="content grid grid-cols-2 grid-rows-2 place-items-center sm:flex">
         {Object.entries(timeLeft).map((el) => {
           const label = el[0]
           const value = el[1]
