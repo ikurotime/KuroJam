@@ -11,7 +11,7 @@ import {
 import { Input } from '@/components/ui/input.tsx'
 import { Label } from '@/components/ui/label.tsx'
 
-import {  useState } from 'react'
+import { useState } from 'react'
 import { useToast } from './use-toast.ts'
 
 export function DialogEmails() {
@@ -23,33 +23,32 @@ export function DialogEmails() {
     setLoading(true)
     fetch('/api/save-reminder', {
       method: 'POST',
-      body: JSON.stringify({email})
+      body: JSON.stringify({ email })
     }).then((res) => {
       if (res.status === 200) {
         toast({
-          description: "El recordatorio se ha guardado correctamente.",
+          description: 'El recordatorio se ha guardado correctamente.'
         })
-      }else if (res.status === 400) {
+      } else if (res.status === 400) {
         toast({
-          variant: "destructive",
-          title: "Error. El correo ya está registrado.",
+          variant: 'destructive',
+          title: 'Error. El correo ya está registrado.'
         })
-      }else if (res.status !== 200) {
+      } else if (res.status !== 200) {
         toast({
-          variant: "destructive",
-          title: "Error. No se ha podido guardar el recordatorio.",
-          description: "Intentalo de nuevo más tarde.",
+          variant: 'destructive',
+          title: 'Error. No se ha podido guardar el recordatorio.',
+          description: 'Intentalo de nuevo más tarde.'
         })
       }
       setEmail('')
       setLoading(false)
-    }
-    )
+    })
   }
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="text-xl">¡Dejame un recordatorio!</Button>
+        <Button className="text-xl">¡Déjame un recordatorio!</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <form onSubmit={handleSubmit}>
@@ -76,7 +75,9 @@ export function DialogEmails() {
               />
             </div>
             <DialogFooter>
-              <Button type="submit" disabled={loading}>{loading ? 'Enviando...': 'Enviar'}</Button>
+              <Button type="submit" disabled={loading}>
+                {loading ? 'Enviando...' : 'Enviar'}
+              </Button>
             </DialogFooter>
           </div>
         </form>

@@ -20,7 +20,12 @@ import { DialogTopics } from '@/components/ui/DialogTopics.tsx'
         </h2>
         <Countdown client:load />
         <div class="flex flex-col md:flex-row text-xl gap-3">
-          <DialogEmails client:load />
+          <div class="flex flex-col gap-3 items-center">
+            <DialogEmails client:load />
+            <span class="text-sm text-amber-400"
+              >¡+30 desarrolladores interesados!</span
+            >
+          </div>
           <DialogTopics client:load />
         </div>
       </section>
@@ -29,7 +34,7 @@ import { DialogTopics } from '@/components/ui/DialogTopics.tsx'
         <Section
           client:load
           title="¿Qué es? 🤔"
-          description={'KuroJam es un evento de desarrollo, donde los participantes crearán un proyecto basado en un tematica elegida por la comunidad.'}
+          description={'KuroJam es un evento de desarrollo, donde los participantes crearán un proyecto basado en un temática elegida por la comunidad.'}
         />
         <Section
           client:load
@@ -72,7 +77,7 @@ import { DialogTopics } from '@/components/ui/DialogTopics.tsx'
         <Section
           client:load
           title="¿Cómo me registro? 📖"
-          description=" Para registrarte en KuroJam, deberás llenar el formulario de registro el dia del evento."
+          description=" Para registrarte en KuroJam, deberás llenar el formulario de registro el día del evento."
         />
         <Section
           client:load
@@ -88,7 +93,7 @@ import { DialogTopics } from '@/components/ui/DialogTopics.tsx'
         <Section
           client:load
           title="¿Dónde puedo encontrar más información? 📚"
-          description="Para más información, puedes visitar nuestro discord"
+          description="Para más información, puedes visitar nuestro Discord."
         />
         <Section
           client:load
