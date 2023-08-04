@@ -12,7 +12,6 @@ export default function Section({ title, description, options }: Props) {
 
     target.style.setProperty('--mouse-x', `${x}px`)
     target.style.setProperty('--mouse-y', `${y}px`)
-    console.log(x, y)
   }
   return (
     <section
@@ -26,7 +25,9 @@ export default function Section({ title, description, options }: Props) {
         {options && (
           <ul className="mt-5">
             {options.map((option) => (
-              <li className="text-xl">{option}</li>
+              <li key={option} className="text-xl">
+                {option}
+              </li>
             ))}
           </ul>
         )}
