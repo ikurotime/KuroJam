@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './styles.css'
 
-const COUNTDOWN_TARGET = new Date('2023-08-10T19:30:00').getTime()
+const dateLocale = new Date('2023-08-10T19:30:00').toLocaleDateString('default')
+const COUNTDOWN_TARGET = new Date(dateLocale).getTime()
 
 const getTimeLeft = () => {
   const totalTimeLeft = COUNTDOWN_TARGET - new Date().getTime()

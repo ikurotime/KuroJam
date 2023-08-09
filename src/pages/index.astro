@@ -21,7 +21,7 @@ import { DialogTopics } from '@/components/ui/DialogTopics.tsx'
           El evento tech donde podrás crear un proyecto basado en un tema en
           común.
         </h2>
-        <Countdown client:load />
+        <Countdown client:only='react' />
         <div class="flex flex-col md:flex-row text-xl gap-3">
           <div class="flex flex-col gap-3 items-center">
             <DialogEmails client:load />
