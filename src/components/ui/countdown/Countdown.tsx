@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './styles.css'
 
-const dateLocale = new Date('2023-08-10T19:30:00+02:00').toLocaleDateString(
+const dateLocale = new Date('2023-08-10T20:00:00+02:00').toLocaleDateString(
   'default',
   { hourCycle: 'h24', hour: '2-digit', minute: '2-digit' }
 )
