@@ -8,6 +8,14 @@
   font-size: 50px;
 }
 
+.countdown-box {
+  background-color: #ffffff15;
+  padding:1px 0px;
+  width: 45px;
+  text-align: center;
+  border-radius: 5px;
+}
+
 .countdown .box {
   width: calc(100% / 4);
   display: flex;
