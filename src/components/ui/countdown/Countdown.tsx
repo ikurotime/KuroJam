@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import './styles.css'
 
-const dateLocale = new Date('2023-08-10T20:00:00+02:00').toLocaleDateString(
+const dateLocale = new Date('2023-08-24T23:59:00+02:00').toLocaleDateString(
   'default',
   { hourCycle: 'h24', hour: '2-digit', minute: '2-digit' }
 )
 const COUNTDOWN_TARGET = new Date(dateLocale).getTime()
-const ZERO_VALUE = 0
+//const ZERO_VALUE = 0
 const getTimeLeft = () => {
   const totalTimeLeft = COUNTDOWN_TARGET - new Date().getTime()
-  const días = ZERO_VALUE
+  const días = Math.floor(totalTimeLeft / (1000 * 60 * 60 * 24))
   const horas = Math.floor((totalTimeLeft / (1000 * 60 * 60)) % 24)
   const minutos = Math.floor((totalTimeLeft / (1000 * 60)) % 60)
   const segundos = Math.floor((totalTimeLeft / 1000) % 60)
