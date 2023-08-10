@@ -7,9 +7,17 @@ const COUNTDOWN_TARGET = new Date(dateLocale).getTime()
 const getTimeLeft = () => {
   const totalTimeLeft = COUNTDOWN_TARGET - new Date().getTime()
   const días = Math.floor(totalTimeLeft / (1000 * 60 * 60 * 24))
+    .toString()
+    .padStart(2, '0')
   const horas = Math.floor((totalTimeLeft / (1000 * 60 * 60)) % 24)
+    .toString()
+    .padStart(2, '0')
   const minutos = Math.floor((totalTimeLeft / (1000 * 60)) % 60)
+    .toString()
+    .padStart(2, '0')
   const segundos = Math.floor((totalTimeLeft / 1000) % 60)
+    .toString()
+    .padStart(2, '0')
   return { días, horas, minutos, segundos }
 }
 
@@ -28,23 +36,23 @@ const Countdown = () => {
 
   return (
     <>
-      <div className="flex gap-2 text-lg">
-        <div className="countdown-box">
+      <div className="flex items-center gap-2 text-lg">
+        <div className="countdown-box aspect-square flex justify-center items-center">
           <span>{timeLeft.días}</span>
           <span>d</span>
         </div>
         <span>:</span>
-        <div className="countdown-box">
+        <div className="countdown-box aspect-square flex justify-center items-center">
           <span>{timeLeft.horas}</span>
           <span>h</span>
         </div>
         <span>:</span>
-        <div className="countdown-box">
+        <div className="countdown-box aspect-square flex justify-center items-center">
           <span>{timeLeft.minutos}</span>
           <span>m</span>
         </div>
         <span>:</span>
-        <div className="countdown-box">
+        <div className="countdown-box aspect-square flex justify-center items-center ">
           <span>{timeLeft.segundos}</span>
           <span>s</span>
         </div>
