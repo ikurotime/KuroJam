@@ -1,0 +1,78 @@
+---
+import Section from '@/components/ui/Section.tsx'
+import Layout from '../layouts/Layout.astro'
+import MainLayout from '../layouts/MainLayout.astro'
+
+import Countdown from '@/components/ui/countdown/Countdown.tsx'
+import { DialogEmails } from '@/components/ui/DialogEmails.tsx'
+import { DialogTopics } from '@/components/ui/DialogTopics.tsx'
+---
+
+<MainLayout
+  title="KuroJam - Cómo participar"
+  description="La Kurojam es un evento / hackathon donde podrás crear un proyecto basado en un tema en común entre el 10 y 25 de agosto. Podrás utilizar cualquier tecnologia mientras se cumpla con la tematica. "
+  keywords="Jam, Hackathon, React, Astro, Desarrollo web, programacion, programación, prograamacion web, javascript, typescript, Svelte, Qwik, SolidJS, Vue, Angular, proyectos web, aprender desarrollo web, aprender programacion web, concursos programacion, como aprender a programar">
+  <Layout>
+    <div class="flex flex-col p-5 gap-5 w-full">
+      <div class="py-5 w-full gap-5 flex flex-col">
+        <h1 class="text-4xl">¿Cómo participar?</h1>
+        <p class="text-xl">
+          Puedes participar solo o en equipo, puedes crear cualquier cosa, web,
+          videojuego etc mientras se cumpla con la temática. Debes crear un
+          proyecto en github que indique en el readme.md toda la información que
+          consideres necesaria. Esto puede ser:
+        </p>
+        <ul>
+          <li>Participantes</li>
+          <li>Como se enfoca en la temática</li>
+          <li>Funcionalidades, etc.</li>
+        </ul>
+        <h1 class="text-4xl">¿Cómo enviar el proyecto?</h1>
+        <p class="text-xl">
+          Vamos a utilizar la web de <a
+            href="https://twitter.com/pheralb_"
+            target="_blank"
+            rel="nofollow">@pheralb_</a
+          > para enviar y revisar el proyecto. '
+        </p>
+        <p class="text-xl">
+          Después de iniciar sesión que entrar en
+
+          <a
+            href="https://phck.vercel.app/kurojam"
+            target="_blank"
+            rel="nofollow">https://phck.vercel.app</a
+          >
+        </p>
+        <img
+          src="/send-project.webp"
+          class="max-w-lg"
+          alt="Imagen con un boton que dice Enviar Proyecto"
+        />
+        <p class="text-xl">
+          y poner "kurojam" como key para poder enviar el proyecto a la jam.
+        </p>
+        <img
+          src="/key-project.webp"
+          class="max-w-lg"
+          alt="Imagen con un boton que dice Enviar Proyecto"
+        />
+
+        <h1 class="text-4xl">No se enviar el proyecto / Lo he enviado mal</h1>
+        <p class="text-xl">
+          No te preocupes, envialo por el discord y hablame por privado para que
+          lo pueda añadir.
+        </p>
+        <div>
+          <a
+            href="https://discord.gg/3sWGgBzXQd"
+            target="_blank"
+            rel="noopener"
+            class="hover:text-purple-400 transition-colors duration-200 ease-in-out border rounded-md px-5 py-4 text-xl"
+            >Entrar a Discord</a
+          >
+        </div>
+      </div>
+    </div>
+  </Layout>
+</MainLayout>
