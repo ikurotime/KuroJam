@@ -27,7 +27,29 @@ const Countdown = () => {
   }, [])
 
   return (
-    <div className="countdown">
+    <>
+      <div className="flex gap-2 text-lg">
+        <div className="countdown-box">
+          <span>{timeLeft.días}</span>
+          <span>d</span>
+        </div>
+        <span>:</span>
+        <div className="countdown-box">
+          <span>{timeLeft.horas}</span>
+          <span>h</span>
+        </div>
+        <span>:</span>
+        <div className="countdown-box">
+          <span>{timeLeft.minutos}</span>
+          <span>m</span>
+        </div>
+        <span>:</span>
+        <div className="countdown-box">
+          <span>{timeLeft.segundos}</span>
+          <span>s</span>
+        </div>
+      </div>
+      {/* <div className="countdown">
       <div className="content grid grid-cols-2 grid-rows-2 place-items-center sm:flex">
         {Object.entries(timeLeft).map((el) => {
           const label = el[0]
@@ -42,7 +64,8 @@ const Countdown = () => {
           )
         })}
       </div>
-    </div>
+      </div> */}
+    </>
   )
 }
 

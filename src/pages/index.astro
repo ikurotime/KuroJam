@@ -15,21 +15,32 @@ import { DialogTopics } from '@/components/ui/DialogTopics.tsx'
   <Layout>
     <div class="py-12 px-4 flex flex-col gap-8">
       <section
-        class="border w-full items-center justify-center flex flex-col p-8 rounded-md gap-4">
-        <h1 class="text-7xl sm:text-9xl">KuroJam</h1>
-        <h2 class="text-2xl">
-          El evento tech donde podrás crear un proyecto basado en un tema en
-          común.
-        </h2>
+        class="border w-full items-center justify-center flex flex-col p-8 rounded-md gap-8">
+        <div class="flex flex-col items-center">
+          <h1 class="text-7xl sm:text-9xl font-bold">KuroJam</h1>
+          <h2 class="text-2xl">
+            El evento tech donde podrás crear un proyecto basado en un tema en
+            común.
+          </h2>
+        </div>
         <div
-          class="border rounded-md p-10 items-center justify-center flex flex-col gap-3">
-          <h1 class="text-5xl">La temática elegida es</h1>
-          <h2 class="text-6xl">PATOS</h2>
+          class="border rounded-md px-10 py-5 items-center justify-center flex flex-col gap-4">
+          <h1 class="text-4xl">La temática elegida es:</h1>
+          <h2 class="text-5xl font-bold">PATOS</h2>
         </div>
-        <div class="md:scale-75">
-          <Countdown client:only="react" />
+        <div class="flex flex-col items-center gap-6 text-4xl my-2">
+          <p>Tiempo restante para enviar tu proyecto:</p>
+          <Countdown client:load />
+          <div class="flex gap-2 text-xl mb-2">
+            <p>
+              ¿Quieres enviar tu proyecto? 
+            </p>
+            <a href="/como-participar" class="text-yellow-500">
+              Haz click aquí
+            </a>
+          </div>
         </div>
-        <p class="text-2xl">para enviar el proyecto</p>
+
         <div
           class="flex-1 gap-5 m-auto grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] w-full items-start justify-center">
           <Section
