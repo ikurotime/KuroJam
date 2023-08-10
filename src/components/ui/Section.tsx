@@ -17,10 +17,10 @@ export default function Section({ title, description, options }: Props) {
     <section
       onMouseMove={handleMouseMove}
       className={`flex group relative flex-col gap-3 w-full h-full border rounded-md before:absolute before:top-0 before:left-0 before:h-full before:w-full before:rounded-border-inherit before:opacity-0 before:transition-opacity before:duration-500 before:content-[''] hover:before:opacity-100 card`}>
-      <div className="border-b w-full p-5 pb-1">
-        <h2 className="text-4xl">{title}</h2>
+      <div className="border-b w-full p-3 pb-1 min-h-[5rem]">
+        <h2 className="text-3xl leading-8">{title}</h2>
       </div>
-      <div className="p-5 pt-0">
+      <div className="p-3 pt-0">
         <p className="text-2xl">{description}</p>
         {options && (
           <ul className="mt-5">
