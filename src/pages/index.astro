@@ -21,89 +21,84 @@ import { DialogTopics } from '@/components/ui/DialogTopics.tsx'
           El evento tech donde podrás crear un proyecto basado en un tema en
           común.
         </h2>
-        <Countdown client:only="react" />
-        <div class="flex flex-col md:flex-row text-xl gap-3">
-          <div class="flex flex-col gap-3 items-center">
-            <DialogEmails client:load />
-            <span class="text-sm text-amber-400"
-              >¡+60 desarrolladores interesados!</span
-            >
-          </div>
-          <DialogTopics client:load />
+        <div
+          class="border rounded-md p-10 items-center justify-center flex flex-col gap-3">
+          <h1 class="text-5xl">La temática elegida es</h1>
+          <h2 class="text-6xl">PATOS</h2>
+        </div>
+        <div
+          class="flex-1 gap-5 m-auto grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] w-full items-start justify-center">
+          <Section
+            client:load
+            title="¿Qué es? 🤔"
+            description={'KuroJam es un evento de desarrollo, donde los participantes crearán un proyecto basado en un temática elegida por la comunidad.'}
+          />
+          <Section
+            client:load
+            title={'¿Cuándo es? 📅'}
+            description={'Se llevará a cabo del 10 al 25 de agosto del 2023.'}
+          />
+          <Section
+            client:load
+            title="¿Habrá premios? 🏆"
+            description="Los 3 mejores proyectos de la KuroJam serán premiados"
+          />
+
+          <Section
+            client:load
+            title={'¿Tengo que hacer una web? 🤔'}
+            description={'Puedes entregarnos tu proyecto en cualquier formato, ya sea una web, una app, un juego, etc. Mientras entre dentro de la temática, ¡todo vale!'}
+          />
+        </div>
+        <div class="w-full flex-1 flex justify-center border-b py-2">
+          <h3 class="text-5xl">FAQ</h3>
+        </div>
+        <div
+          class="flex-1 gap-5 my-auto grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] w-full items-start justify-center">
+          <Section
+            client:load
+            title={'¿Tengo que hacer equipos 👥?'}
+            description={'Puedes participar solo o en equipo, como prefieras. Hasta 5 personas por equipo. (Puede haber excepciones)'}
+          />
+          <Section
+            client:load
+            title={'¿Cuánto cuesta 😱?'}
+            description={'Es un evento gratuito, por lo que no tendrás que pagar nada para participar.'}
+          />
+          <Section
+            client:load
+            title={'¿Dónde es? 🌎'}
+            description={' KuroJam se llevará a cabo de manera virtual, por lo que podrás participar desde cualquier parte del mundo.'}
+          />
+
+          <Section
+            client:load
+            title="¿Cómo me registro? 📖"
+            description=" Para registrarte en KuroJam, deberás llenar el formulario de registro el día del evento."
+          />
+          <Section
+            client:load
+            title="¿Qué necesito para participar? 📝"
+            description="Para participar en KuroJam, necesitarás:"
+            options={['Un PC', 'Una cuenta de GitHub', 'Una cuenta de Discord']}
+          />
+          <Section
+            client:load
+            title="¿Quiénes son los patrocinadores? 🤝"
+            description="KuroJam actualmente no cuenta con patrocinadores. Si quieres patrocinar el evento, puedes contactarnos en: @ikurotime en Twitter."
+          />
+          <Section
+            client:load
+            title="¿Dónde puedo encontrar más información? 📚"
+            description="Para más información, puedes visitar nuestro Discord."
+          />
+          <Section
+            client:load
+            title="¿Cómo puedo ayudar? 🤗"
+            description="Puedes ayudarnos compartiendo el evento en redes sociales. ¡Muchas gracias!"
+          />
         </div>
       </section>
-      <div
-        class="flex-1 gap-5 m-auto grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] w-full items-start justify-center">
-        <Section
-          client:load
-          title="¿Qué es? 🤔"
-          description={'KuroJam es un evento de desarrollo, donde los participantes crearán un proyecto basado en un temática elegida por la comunidad.'}
-        />
-        <Section
-          client:load
-          title={'¿Cuándo es? 📅'}
-          description={'Se llevará a cabo del 10 al 25 de agosto del 2023.'}
-        />
-        <Section
-          client:load
-          title="¿Habrá premios? 🏆"
-          description="Los 3 mejores proyectos de la KuroJam serán premiados"
-        />
-
-        <Section
-          client:load
-          title={'¿Tengo que hacer una web? 🤔'}
-          description={'Puedes entregarnos tu proyecto en cualquier formato, ya sea una web, una app, un juego, etc. Mientras entre dentro de la temática, ¡todo vale!'}
-        />
-      </div>
-      <div class="w-full flex-1 flex justify-center border-b py-2">
-        <h3 class="text-5xl">FAQ</h3>
-      </div>
-      <div
-        class="flex-1 gap-5 my-auto grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] w-full items-start justify-center">
-        <Section
-          client:load
-          title={'¿Tengo que hacer equipos 👥?'}
-          description={'Puedes participar solo o en equipo, como prefieras. Hasta 5 personas por equipo. (Puede haber excepciones)'}
-        />
-        <Section
-          client:load
-          title={'¿Cuánto cuesta 😱?'}
-          description={'Es un evento gratuito, por lo que no tendrás que pagar nada para participar.'}
-        />
-        <Section
-          client:load
-          title={'¿Dónde es? 🌎'}
-          description={' KuroJam se llevará a cabo de manera virtual, por lo que podrás participar desde cualquier parte del mundo.'}
-        />
-
-        <Section
-          client:load
-          title="¿Cómo me registro? 📖"
-          description=" Para registrarte en KuroJam, deberás llenar el formulario de registro el día del evento."
-        />
-        <Section
-          client:load
-          title="¿Qué necesito para participar? 📝"
-          description="Para participar en KuroJam, necesitarás:"
-          options={['Un PC', 'Una cuenta de GitHub', 'Una cuenta de Discord']}
-        />
-        <Section
-          client:load
-          title="¿Quiénes son los patrocinadores? 🤝"
-          description="KuroJam actualmente no cuenta con patrocinadores. Si quieres patrocinar el evento, puedes contactarnos en: @ikurotime en Twitter."
-        />
-        <Section
-          client:load
-          title="¿Dónde puedo encontrar más información? 📚"
-          description="Para más información, puedes visitar nuestro Discord."
-        />
-        <Section
-          client:load
-          title="¿Cómo puedo ayudar? 🤗"
-          description="Puedes ayudarnos compartiendo el evento en redes sociales. ¡Muchas gracias!"
-        />
-      </div>
     </div>
   </Layout>
 </MainLayout>
