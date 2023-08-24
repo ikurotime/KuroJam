@@ -18,6 +18,9 @@ const getTimeLeft = () => {
   const segundos = Math.floor((totalTimeLeft / 1000) % 60)
     .toString()
     .padStart(2, '0')
+  if (totalTimeLeft <= 0) {
+    return { días: 0, horas: 0, minutos: 0, segundos: 0 }
+  }
   return { días, horas, minutos, segundos }
 }
 
@@ -37,26 +40,33 @@ const Countdown = () => {
   return (
     <>
       <div className="flex items-center gap-2 text-lg">
-        <div className="countdown-box aspect-square flex justify-center items-center">
-          <span>{timeLeft.días}</span>
-          <span>d</span>
-        </div>
-        <span>:</span>
-        <div className="countdown-box aspect-square flex justify-center items-center">
-          <span>{timeLeft.horas}</span>
-          <span>h</span>
-        </div>
-        <span>:</span>
-        <div className="countdown-box aspect-square flex justify-center items-center">
-          <span>{timeLeft.minutos}</span>
-          <span>m</span>
-        </div>
-        <span>:</span>
-        <div className="countdown-box aspect-square flex justify-center items-center ">
-          <span>{timeLeft.segundos}</span>
-          <span>s</span>
-        </div>
+        {COUNTDOWN_TARGET - new Date().getTime() <= 0 ? (
+          <p className="text-2xl">¡Se acabó el tiempo!</p>
+        ) : (
+          <>
+            <div className="countdown-box aspect-square flex justify-center items-center">
+              <span>{timeLeft.días}</span>
+              <span>d</span>
+            </div>
+            <span>:</span>
+            <div className="countdown-box aspect-square flex justify-center items-center">
+              <span>{timeLeft.horas}</span>
+              <span>h</span>
+            </div>
+            <span>:</span>
+            <div className="countdown-box aspect-square flex justify-center items-center">
+              <span>{timeLeft.minutos}</span>
+              <span>m</span>
+            </div>
+            <span>:</span>
+            <div className="countdown-box aspect-square flex justify-center items-center ">
+              <span>{timeLeft.segundos}</span>
+              <span>s</span>
+            </div>
+          </>
+        )}
       </div>
+
       {/* <div className="countdown">
       <div className="content grid grid-cols-2 grid-rows-2 place-items-center sm:flex">
         {Object.entries(timeLeft).map((el) => {
