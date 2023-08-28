@@ -1,0 +1,80 @@
+---
+import Projects from '@/components/ui/Projects.tsx'
+import Layout from '../layouts/Layout.astro.tsx'
+import MainLayout from '../layouts/MainLayout.astro.tsx'
+
+import Countdown from '@/components/ui/countdown/Countdown.tsx'
+import { DialogEmails } from '@/components/ui/DialogEmails.tsx'
+import { DialogTopics } from '@/components/ui/DialogTopics.tsx'
+---
+
+<div class="flex flex-col p-5 gap-5 w-full">
+  <section class="py-5 w-full gap-3 flex flex-col">
+    <h1 class="text-5xl">Proyectos</h1>
+    <p class="text-xl">
+      Aquí podrás ver los proyectos que se han creado en la KuroJam.
+    </p>
+  </section>
+  <Projects
+    src="https://github.com/noel-lopez/pato-click/raw/main/banner.png"
+    title="Ganador 🥇: Pato-Click"
+    srcGithub="https://github.com/noel-lopez/pato-click"
+    srcProject="https://patoclick.vercel.app"
+    description={`¡Sumérgete en la adictiva experiencia de Pato Click, el juego idle que te sumerge en un mundo lleno de plumas y fortuna! 🦆💰 Pato Click es un proyecto creado para la KuroJam, una hackathon en la que hemos invertido dos semanas de esfuerzo y creatividad. Cada inversión que hagas te acerca un paso más a la cima del escalafón, ¡así que prepárate para convertirte en el rey del estanque!`}
+  />
+  <Projects
+    src="https://i.postimg.cc/MHYh29Gp/Screenshot-2023-08-28-at-10-57-13.png"
+    title="Ganador 🥈: La charca del silencio"
+    srcGithub="https://github.com/NachoVBordera/LaCharcaDelSilencio"
+    srcProject="https://lacharcadelsilencio.vercel.app"
+    description="Historia interactiva con narrativa ramificada, donde el jugador podrá elegir entre diferentes opciones para avanzar en la historia. El objetivo es que el jugador se sienta inmerso en la historia y que sus decisiones tengan consecuencias en el desarrollo de la misma."
+  />
+  <Projects
+    title="Ganador 🥉: Clone Duck"
+    src="https://i.postimg.cc/0yB5B0rs/Screenshot-2023-08-28-at-11-09-53.png"
+    srcProject="https://the-frondev.github.io/clone-duck/"
+    srcGithub="https://github.com/the-frondev/clone-duck"
+    description='Los patos se han adueñado de todo! Incluso de aquel entrañable juego "Snake" que jugábamos de niños. Ahora, un pato que vive en un viejo laboratorio olvidado, ha encontrado un hongo radioactivo en la sala de clonación. Este hongo ha hecho que cambie de forma y además se duplique, generando un clon que lo sigue a todos lados.'
+  />
+  <section class="py-5 w-full gap-3 flex flex-col flex-1">
+    <h2 class="text-5xl">Resto de participantes</h2>
+    <p class="text-xl">
+      Este espacio reune todos los demás proyectos que se han creado en la
+      KuroJam. ¡Muchas gracias a todos por participar!
+    </p>
+
+    <Projects
+      title="🎖️ Quackboard"
+      src="https://i.postimg.cc/FKRj34nx/Screenshot-2023-08-28-at-11-39-31.png"
+      srcProject="https://duck-quackboard.vercel.app"
+      srcGithub="https://github.com/alexhmdev/QuackBoard"
+      description="QuackBoard es un divertido teclado con temática de pato, utiliza sonidos de pato en lugar de sonidos de piano corrientes"
+    />
+    <Projects
+      title="🎖️ Duckurophy"
+      src="https://i.postimg.cc/bJr2D9rV/Screenshot-2023-08-28-at-11-38-58.png"
+      srcGithub="https://github.com/nujovich/kurojam-sparta"
+      description="Duckurophy es una web app que te permite crear imagenes incluyendo a nuestros plumados amigos, ¡los patos! Expresa tu creatividad con OpenAI y adorables imágenes de patos"
+    />
+    <Projects
+      title="🎖️ DuckHunt"
+      src="https://i.postimg.cc/J4vM3cnH/Screenshot-2023-08-28-at-11-35-26.png"
+      srcProject="https://duck-hunt-five.vercel.app/"
+      srcGithub="https://github.com/JoniSchimansky/DuckHunt"
+      description="¡Bienvenidos al emocionante mundo de DuckHunt! En este divertido y adictivo juego, te sumergirás en la experiencia de la caza virtual de patos. ¡Prepárate para poner a prueba tus habilidades de puntería y reflejos!"
+    />
+    <Projects
+      title="🎖️ Fit Duck"
+      src="https://i.postimg.cc/d3tb2Dr0/Screenshot-2023-08-28-at-11-28-19.png"
+      srcProject="https://fit-duck.vercel.app/"
+      description="Sigue tus rutinas plumadas con Fit Duck, una aplicación que te permite crear y seguir tus propias rutinas de ejercicios. ¡Pon a prueba tu fuerza de voluntad y tu resistencia con Fit Duck!"
+    />
+    <Projects
+      title="🎖️ Pat-Attack"
+      src="https://i.postimg.cc/QNkPtNQ9/Screenshot-2023-08-28-at-11-23-46.png"
+      srcProject="https://pat-attack-three.vercel.app/"
+      srcGithub="https://github.com/watercubz/pat-Attack"
+      description="Libra al mundo de los monstruos utilizando tus poderes de fuego ¡Pero ten cuidado! Si no eres lo suficientemente rápido, ¡los monstruos te atacarán!"
+    />
+  </section>
+</div>

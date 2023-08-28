@@ -2,7 +2,7 @@
 import Section from '@/components/ui/Section.tsx'
 import Layout from '../layouts/Layout.astro'
 import MainLayout from '../layouts/MainLayout.astro'
-
+import Proyectos from '../components/proyectos.astro'
 import Countdown from '@/components/ui/countdown/Countdown.tsx'
 import { DialogEmails } from '@/components/ui/DialogEmails.tsx'
 import { DialogTopics } from '@/components/ui/DialogTopics.tsx'
@@ -28,17 +28,11 @@ import { DialogTopics } from '@/components/ui/DialogTopics.tsx'
           <h1 class="text-4xl">La temática elegida es:</h1>
           <h2 class="text-5xl font-bold">🦆 PATOS 🦆</h2>
         </div>
-        <div class="flex flex-col items-center gap-6 text-4xl my-3">
-          <p>Tiempo restante para enviar tu proyecto:</p>
-          <Countdown client:load />
-          <div class="flex gap-2 text-xl mb-2">
-            <p>¿Cómo participar?</p>
-            <a href="/como-participar" class="text-yellow-500">
-              Haz click aquí
-            </a>
-          </div>
-        </div>
 
+        <Proyectos />
+        <div class="w-full flex-1 flex justify-center border-b py-2">
+          <h3 class="text-5xl">FAQ</h3>
+        </div>
         <div
           class="flex-1 gap-5 m-auto grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] w-full items-start justify-center">
           <Section
@@ -63,9 +57,7 @@ import { DialogTopics } from '@/components/ui/DialogTopics.tsx'
             description={'Puedes entregarnos tu proyecto en cualquier formato, ya sea una web, una app, un juego, etc. Mientras entre dentro de la temática, ¡todo vale!'}
           />
         </div>
-        <div class="w-full flex-1 flex justify-center border-b py-2">
-          <h3 class="text-5xl">FAQ</h3>
-        </div>
+
         <div
           class="flex-1 gap-5 my-auto grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] w-full items-start justify-center">
           <Section
