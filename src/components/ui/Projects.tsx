@@ -20,7 +20,7 @@ export default function Projects({
       <div className="border-b w-full p-3 pb-1 min-h-[3rem]">
         <h2 className="text-3xl leading-8">{title}</h2>
       </div>
-      <div className="p-3 pt-0 flex gap-5 text-center items-center ">
+      <div className="p-3 pt-0 flex gap-5 flex-col md:flex-row text-center items-center ">
         <img src={src} alt="" className="w-full max-w-lg" />
         <div className="flex gap-5 flex-col">
           <p className="text-2xl">{description}</p>
